@@ -1,4 +1,12 @@
+"use strict";
+
+
 const lanIP = `${window.location.hostname}:5000`;
+const socket = io(`http://${lanIP}`);
+
+const init = function () {
+    listenToSocket()
+};
 
 const changeUltrasonicSensor = function (ultrasonicSensor, data){
     const ultrasonicSensorData = document.getElementById(`ultrasonicSensor${ultrasonicSensor}`);
@@ -11,7 +19,4 @@ const listenToSocket = function () {
     });
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-    console.info("DOM geladen");
-    changeUltrasonicSensor(1, 500);
-});
+document.addEventListener("DOMContentLoaded", init);
