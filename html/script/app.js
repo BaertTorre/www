@@ -6,7 +6,7 @@ const socket = io(`http://${lanIP}`);
 
 const init = function () {
     listenToSocket()
-    setInterval(leesUltrasonicSensors, 100)
+    setInterval(leesUltrasonicSensors, 500)
 };
 
 const leesUltrasonicSensors = function () {
