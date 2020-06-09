@@ -5,8 +5,8 @@ const lanIP = `${window.location.hostname}:5000`;
 const socket = io(`http://${lanIP}`);
 
 const init = function () {
-    listenToSocket()
-    setInterval(leesUltrasonicSensors, 500)
+    //listenToSocket()
+    //setInterval(leesUltrasonicSensors, 500)
 };
 
 const leesUltrasonicSensors = function () {
